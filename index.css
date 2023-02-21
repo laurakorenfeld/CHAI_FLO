@@ -93,6 +93,7 @@
     background-color: var(--blanc);
     color: var(--bleu-fonce);
     border: none;
+    margin-bottom: 30px;
     
   }
   .card-title {
