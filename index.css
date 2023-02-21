@@ -1,6 +1,6 @@
 /* Utilisation de variables CSS pour les couleurs */
 :root {
-    --bordeaux: #d60c59;
+    --rose: #d60c59;
     --bleu-fonce: #0f2c3e;
     --blanc: #f8f1ec;
   }
@@ -25,7 +25,7 @@
 
   /* Appliquer la couleur de fond */
   body {
-    background-color: var(--bordeaux);
+    background-color: var(--bleu-fonce);
     color: var(--blanc);
     font-family: sans-serif;
     font-size: 16px;
@@ -36,7 +36,7 @@
   }
 
   .jumbotron {
-    background-color: var(--bordeaux);
+    background-color: var(--bleu-fonce);
     padding-left: 100px;
   }
 
@@ -47,7 +47,7 @@
   }
   a:hover {
     text-decoration: underline;
-    color: var(--bordeaux);
+    color: var(--bleu-fonce);
     
   }
 
@@ -61,7 +61,7 @@
   }
 
   .container-fluid {
-    color: var(--bleu-fonce);
+    color: var(--blanc);
   }
 
   /* Style de la barre de navigation */
@@ -78,30 +78,30 @@
   
   /* Style des boutons */
   .btn-primary {
-    background-color: var(--bleu-fonce);
-    border-color: var(--bleu-fonce);
+    background-color: var(--rose);
+    border-color: var(--rose);
     color: var(--blanc);
     border-radius: 20px;
   }
   .btn-primary:hover {
-    background-color: var(--bordeaux);
-    border-color: var(--bordeaux);
+    background-color: var(--bleu-fonce);
+    border-color: var(--bleu-fonce);
     color: var(--blanc);
   }
   
   /* Style de la carte de produit */
   .card {
     background-color: var(--blanc);
-    color: var(--bleu-fonce);
+    color: var(--rose);
     border: none;
     margin-bottom: 30px;
     border-radius: 20px;
   }
   .card-title {
-    color: var(--bordeaux);
+    color: var(--bleu-fonce);
   }
   .card-text {
-    color: var(--bleu-fonce);
+    color: var(--rose);
     padding: 30px;
   }
 
@@ -113,22 +113,24 @@
 
   /* Style du pied de page */
   .footer {
-    background-color: var(--bleu-fonce);
-    color: var(--blanc);
+    background-color: var(--rose);
+    color: var(--bleu);
     font-size: 0.8rem;
     padding: 2rem 0;
     padding-top: 50px;
   }
-
+  .footer:hover {
+    color: var(--blanc);
+  }
   .container-footer{
-    background-color: var(--bleu-fonce);
+    background-color: var(--rose);
     padding-top: 20px;
   }
 
   .display-4 {
     font-family: 'Open Sans', sans-serif;
     font-size: 40pt;
-    color: var(--bleu-fonce);
+    color: var(--blanc);
     float: left;
     font-weight: bold;
   }
