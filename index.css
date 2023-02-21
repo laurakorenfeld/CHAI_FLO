@@ -81,6 +81,7 @@
     background-color: var(--bleu-fonce);
     border-color: var(--bleu-fonce);
     color: var(--blanc);
+    border-radius: 20px;
   }
   .btn-primary:hover {
     background-color: var(--bordeaux);
@@ -94,7 +95,7 @@
     color: var(--bleu-fonce);
     border: none;
     margin-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 20px;
   }
   .card-title {
     color: var(--bordeaux);
@@ -107,6 +108,7 @@
   .card-img-top {
     width: 100%;
     height: auto;
+    border-radius: 20px;
   }
 
   /* Style du pied de page */
