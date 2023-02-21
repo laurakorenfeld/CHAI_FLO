@@ -94,7 +94,7 @@
     color: var(--bleu-fonce);
     border: none;
     margin-bottom: 30px;
-    
+    border-radius: 10px;
   }
   .card-title {
     color: var(--bordeaux);
