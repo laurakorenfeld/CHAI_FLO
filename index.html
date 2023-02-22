@@ -51,56 +51,29 @@
 			</div>
 		</nav> <br><br><br><br>
 
-		<section class="container text-center" >
+		<section class="container text-center">
 			<div class="container row">
-			  	<div class="col-lg-6"><br><br>
-					<h1 class="display-4" style="float: left;">BIENVENUE CHEZ CHAI FLO</h1><br><br>
-					<a class="btn btn-primary btn-lg" href="#produits" role="button">L'actualité</a>
-					<a class="btn btn-primary btn-lg" href="vin.html" role="button">Nos produits</a>
-				</div>
-
-			<div class="col-lg-4">
+			  <div class="col-lg-6"><br><br>
+				<h1 class="display-4" style="float: left;">BIENVENUE CHEZ CHAI FLO</h1><br><br>
+				<a id="actualite" class="btn btn-primary btn-lg" href="#produits" role="button">L'actualité</a>
+				<script>
+				  function afficherCarres() {
+					var reviews = document.getElementById("reviews");
+					reviews.innerHTML = "<div class='container' id='produits'><h2>À la une</h2><div class='row'><div class='col-md-4 produit'><div class='card'></div></div><div class='col-md-4 produit'><div class='card'></div></div><div class='col-md-4 produit'><div class='card'></div></div></div></div>";
+				  }
+				  document.querySelector('#actualite').addEventListener('click', afficherCarres);
+				</script>
+				<a class="btn btn-primary btn-lg" href="vin.html" role="button">Nos produits</a>
+			  </div>
+		  
+			  <div class="col-lg-4">
 				<img class="img-acc" src="images/logo2.png">
+			  </div>
 			</div>
-			</div>
-		</section>
-	<div id="reviews"></div>
-
-
-	<div id="reviews-container">
-		<div class="container" id="produits">
-			<h2>À la une</h2>
-			<div class="row"></div>
-		</div>
-	</div>
-	
-	<script>
-		var apiKey = "AIzaSyBuoXoi42-N6V1Ol254-kAoX_snQVauV-A";
-		var placeId = "ChIJY6z6fen7Uw0RCu0nGtal4hc";
-	
-		// Appel à l'API Places pour récupérer les avis contenant des photos
-		fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${apiKey}`)
-			.then(response => response.json())
-			.then(data => {
-				var reviews = data.result.reviews.filter(review => review.photos && review.photos.length > 0).slice(0, 3);
-				var reviewsHtml = "";
-	
-				// Boucle pour afficher les avis
-				reviews.forEach(review => {
-					reviewsHtml += `
-						<div class="review">
-							<img src="${review.photos[0].getUrl()}" alt="Photo de l'avis">
-							<p>${review.text}</p>
-						</div>
-					`;
-				});
-	
-				// Ajout du HTML des avis dans la page
-				document.querySelector("#produits .row").innerHTML = reviewsHtml;
-			})
-			.catch(error => console.error(error));
-	</script>
-	
+		  </section>
+		  
+		  <div id="reviews"></div>
+		  
 		<footer class="container-footer">
 			<div class="container">
 			  <div class="row">
