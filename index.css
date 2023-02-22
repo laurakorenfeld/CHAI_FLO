@@ -77,11 +77,25 @@
   }
   
   /* Style des boutons */
+  .btn-primary-acc {
+    background-color: var(--bleu-fonce);
+    border-color: var(--rose);
+    color: var(--blanc);
+    border-radius: 30px;
+    border-width: 2.5px;
+  }
+  .btn-primary-acc:hover {
+    background-color: var(--rose);
+    border-color: var(--bleu-fonce);
+    color: var(--blanc);
+  }
+
   .btn-primary {
     background-color: var(--rose);
     border-color: var(--rose);
     color: var(--blanc);
     border-radius: 20px;
+    border-width: 2px;
   }
   .btn-primary:hover {
     background-color: var(--bleu-fonce);
@@ -141,7 +155,7 @@
     font-weight: bold;
   }
   
-  .produit {
+  .avis {
     width: 100px;
     height: 100px;
     background-color: #ccc;
