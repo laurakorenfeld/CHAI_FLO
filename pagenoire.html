@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head id="head" class="dark">
+	<title>CHAI FLO</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/252879800c.js" crossorigin="anonymous"></script>	<link rel="stylesheet" href="index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>	<script>
+		$(document).ready(function() {
+		  // Initialiser le composant de la barre de navigation
+		  $('.navbar-toggler').on('click', function() {
+			$(this).toggleClass('active');
+			$('.navbar-collapse').toggleClass('show');
+		  });
+		});
+	</script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('81JaGEbx90K_UYXuD');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+			var time = Date.now();
+            document.getElementById('pagenoire').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_kii73lk', 'template_9fto67q', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body id="body" class="dark">
+	<section id="title">
+		<nav class="dark navbar navbar-expand-lg navbar-light fixed-top">
+			<a class="dark navbar-brand" href="#">
+			
+			</a>
+			<button class="dark navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="dark navbar-toggler-icon"></span>
+			</button>
+			<div class="dark collapse navbar-collapse" id="navbarNav">
+				<ul class="dark navbar-nav">
+					<li class="dark nav-item active">
+					</li>
+					<li class="dark nav-item">
+						<a class="dark nav-link" href="vin.html">Produits</a>
+					</li>
+					<li class="dark nav-item">
+						<a class="dark nav-link" href="paniers.html">Paniers garnis</a>
+					</li>
+					<li class="dark nav-item">
+						<a class="dark nav-link" href="presentation.html">À Propos</a>
+					</li>
+					<li class="dark nav-item">
+						<a class="dark nav-link" href="contact.html">Nous contacter</a>
+					</li>
+				</ul>
+			</div>
+		</nav> <br><br><br><br>
+	</section>
+
+		<section class="dark container text-center">
+			<div class="dark container row">
+			  	<div class="dark col-lg-6"><br><br>
+					<h1 class="dark display-4" style="float: left;">BIENVENUE CHEZ Laura</h1><br><br>
+					<a id="actualite" class="dark btn" href="#" onclick="afficherPhotos()" role="button">L'actualité</a>
+					<script>
+				  		function afficherPhotos() {
+							var images = ["gimber.png", "moscow.jpg", "the.png", "colis.png", "choco.jpg", "vin_blanc.png"];
+						  	var descriptions = ['blabla Gimber', 'blabla moscow', 'vlkcj', 'lih', 'oih', 'velkhpi'];
+
+						  	// Tableau pour stocker les images sélectionnées aléatoirement
+						  	var selectedImages = [];
+
+							// Générer 3 nombres aléatoires pour sélectionner 3 images
+							while (selectedImages.length < 3) {
+								var randomIndex = Math.floor(Math.random() * images.length);
+								if (!selectedImages.includes(images[randomIndex])) {
+							 		selectedImages.push(images[randomIndex]);
+								}
+							}
+							// Générer le code HTML pour afficher les 3 images avec leur description
+							var html = '<div id="avis" class="dark container"><h2 style="float:left">Nos avis</h2><div class="dark container row">';
+								html += '';
+							for (var i = 0; i < selectedImages.length; i++) {
+								html += '<div class="dark col-lg-4 produit card-body">';
+								html += '<div class="dark card">';
+								html += '<img class="dark card-img-top" src="images/' + selectedImages[i] + '" alt="' + selectedImages[i].split(".")[0] + '">';
+								html += '<div class="dark card-body">';
+								html += '<h5 class="dark card-title">' + selectedImages[i].split(".")[0] + '</h5>';
+								html += '<p class="dark card-text">'+ descriptions[i] +'</p>';
+								html += '</div></div></div>';
+							}
+							html += '</div></div>';
+
+							// Afficher le code HTML dans la page
+							var photos = document.getElementById("photos");
+							photos.innerHTML = html;
+							}
+					</script>
+					<a class="dark btn" href="vin.html" role="button">Nos produits</a>
+					<a id="test" class="dark btn" href="#" onclick="fenetrepop()" role="button">Ce bouton est un test</a>
+					<script>
+						function fenetrepop() {
+						alert("Je t'avais dit que c'était un test");
+						}
+					</script>
+					<a id="pagenoire" class="btn btn-primary-acc btn-lg" href="index.html" style="float:right" role="button">Page noire</a>	
+					<script>
+						
+					</script>	
+				</div>
+				<div class="dark col-lg-4">
+				
+			  	</div>
+			</div>
+
+			<div id="photos" class="dark container"></div>
+
+			<div id="reviews">
+				<div class="dark container" id="alaune">
+					<h2>À la une</h2>
+						<div class="dark row">
+							<div class="dark col-md-4 produit">
+								<div class="dark card">
+									
+										<div class="dark card-body">
+											<h5 class="dark card-title">Vin rouge</h5>
+											<p class="dark card-text">Un vin rouge corsé avec des notes de fruits noirs et d'épices.</p>
+											<p class="dark card-text"><strong>24.99€</strong></p>
+											<a href="#" class="dark btn">Ajouter au Panier</a>
+										</div>
+								</div>
+							</div>
+							<div class="dark col-md-4 produit">
+								<div class="dark card">
+									
+										<div class="dark card-body">
+											<h5 class="dark card-title">Vin Blanc</h5>
+											<p class="dark card-text">Un vin blanc léger et frais avec des notes d'agrumes.</p>
+											<p class="dark card-text"><strong>19.99€</strong></p>
+											<a href="#" class="dark btn">Ajouter au Panier</a>
+										</div>
+								</div>
+							</div>
+							<div class="dark col-md-4 produit">
+								<div class="dark card">
+										<div class="dark card-body">
+											<h5 class="dark card-title">Gimber</h5>
+											<p class="dark card-text">Nature, dilué </p>
+											<p class="dark card-text"><strong>39.99€</strong></p>
+											<a href="#" class="dark btn">Ajouter au Panier</a>
+										</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div><br><br>
+		</section>
+</body>
+<footer id="footer" class="dark container-footer">
+	<div class="dark container">
+		<div class="dark row">
+			<div class="dark col-md-4">
+				<h5 class="dark text-uppercase mb-4">A propos de nous</h5>
+				<p>Nous sommes une cave à vin en ligne offrant une sélection exceptionnelle de vins et de paniers garnis.</p>
+			</div>
+			<div class="dark col-md-4">
+				<h5 class="dark text-uppercase mb-4">Contactez-nous</h5>
+				<ul class="dark list-unstyled">
+					
+				  </ul>
+				</div>
+				<div class="dark col-md-4">
+					<h5 class="dark text-uppercase mb-4">Nous suivre</h5>
+					<ul class="dark list-inline">
+						<li class="dark list-inline-item">
+							<a href="https://www.facebook.com/chaifloleshalles">
+								<i class="dark fa-brands fa-facebook fa-3x"></i>
+							</a>
+						</li>
+						<li class="dark list-inline-item">
+							<a href="https://www.instagram.com/chai_flo/">
+								<i class="dark fa-brands fa-instagram fa-3x"></i>
+							</a>
+						</li>
+				  	</ul>
+				</div>
+		</div>
+	</div>
+</footer>
+</html>
+
