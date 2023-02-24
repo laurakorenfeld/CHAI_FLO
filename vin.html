@@ -154,24 +154,16 @@
 			// Ajouter un événement de survol à chaque vignette de produit
 			var produits = document.querySelectorAll(".produit");
 			produits.forEach(function(produit) {
-			  produit.addEventListener("mouseenter", function() {
+			  	produit.addEventListener("mouseenter", function() {
 				// Trouver le prix du produit survolé
-				var price = (Math.random() * (100 - 2) + 2).toFixed(2);
+				var price = (Math.random() * 100 ).toFixed(2);
 			
 				// Modifier le contenu de la carte pour afficher le prix
 				var cardBody = this.querySelector(".card-body");
 				cardBody.innerHTML = '<h5 class="card-title">' + cardBody.querySelector(".card-title").textContent + '</h5>' +
 									 '<p class="card-text">' + price + ' €</p>' +
 									 '<a href="#" class="btn btn-primary">Ajouter au panier</a>';
-			  });
-			
-			  // Ajouter un événement pour restaurer le contenu original de la carte
-			  produit.addEventListener("mouseout", function() {
-				var cardBody = this.querySelector(".card-body");
-				cardBody.innerHTML = '<h5 class="card-title">' + cardBody.querySelector(".card-title").textContent + '</h5>' +
-									 cardBody.querySelector(".card-text.price").outerHTML +
-									 '<a href="#" class="btn btn-primary">Ajouter au panier</a>';
-			  });
+			  });			 
 			});
 			</script>
 	</body>

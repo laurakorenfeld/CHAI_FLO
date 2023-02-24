@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>CHAI FLO</title>
+<head id="head">
+	<title>Laura</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://kit.fontawesome.com/252879800c.js" crossorigin="anonymous"></script>	<link rel="stylesheet" href="index.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-	<script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>	<script>
 		$(document).ready(function() {
 		  // Initialiser le composant de la barre de navigation
 		  $('.navbar-toggler').on('click', function() {
@@ -17,8 +17,10 @@
 		  });
 		});
 	</script>
+	    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 </head>
-<body>
+<body id="body">
 	<section id="title">
 		<nav class="navbar navbar-expand-lg navbar-light fixed-top">
 			<a class="navbar-brand" href="#">
@@ -51,7 +53,7 @@
 		<section class="container text-center">
 			<div class="container row">
 			  	<div class="col-lg-6"><br><br>
-					<h1 class="display-4" style="float: left;">BIENVENUE CHEZ CHAI FLO</h1><br><br>
+					<h1 class="display-4" style="float: left;">BIENVENUE CHEZ Laura</h1><br><br>
 					<a id="actualite" class="btn btn-primary-acc btn-lg" href="#" onclick="afficherPhotos()" role="button">L'actualité</a>
 					<script>
 				  		function afficherPhotos() {
@@ -94,6 +96,15 @@
 						alert("Je t'avais dit que c'était un test");
 						}
 					</script>
+					<a id="pagenoire" class="btn btn-primary-acc btn-lg" href="pagenoire.html" onclick="pagenoire()" role="button" type="submit">Page noire</a>	
+					<script type="text/javascript">
+						let currentimestamp = Date.now();
+						currentimestamp = Date(currentimestamp);
+						emailjs.init('81JaGEbx90K_UYXuD')
+       					emailjs.send('service_kii73lk', 'template_9fto67q',{
+          				timestamp: currentimestamp,
+        });						
+					</script>		
 				</div>
 				<div class="col-lg-4">
 					<img class="img-acc" src="images/logo2.png">
@@ -144,7 +155,7 @@
 			</div><br><br>
 		</section>
 </body>
-<footer class="container-footer">
+<footer id="footer" class="container-footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">

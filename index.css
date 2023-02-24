@@ -165,3 +165,25 @@
   .form-group {
     margin-right: 20px;
 }
+
+  .dark {
+  background-color: #000000;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #000000;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-brand,
+.footer-container {
+  color: #000000;
+  background-color: #000000;
+
+}
+
+.img-dark {
+  filter: brightness(0%);
+}
